@@ -1,0 +1,2033 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kumbh+Sans:wght@100;300;500;600;700&family=League+Spartan:wght@100;200;300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --backgroundColor: #ffffff;
+  --creambackground: #fef0ef;
+  --footerbackground: #2b7870;
+  --fontColor: #808080;
+  --fontColorHover: #ff432a;
+  --paragraphColor: #151515;
+  --gray: #d8d7d7;
+  --greencolor: #2b7870;
+  --greenhover: #0a2a27;
+  --linegreen: #e2f1f0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  width: 100%;
+  padding: 25px 10px;
+  background-color: var(--backgroundColor);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+}
+
+.nav-image {
+  height: 20px;
+  margin: auto;
+  margin-left: 4rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav list style */
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  color: var(--fontColor);
+  list-style: none;
+}
+
+.nav-item {
+  margin: auto 20px;
+  position: relative;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  color: var(--fontColorHover);
+}
+
+.nav-item:after {
+  content: " ";
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 3px;
+  top: 20px;
+  left: 0;
+  background-color: var(--fontColorHover);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* Nav list */
+
+.nav-btn {
+  background-color: var(--fontColorHover);
+  color: var(--backgroundColor);
+  font-size: 13px;
+  font-weight: 700;
+  height: 35px;
+  width: 120px;
+  border: 1px solid var(--fontColorHover);
+  border-radius: 20px;
+  margin-right: 4rem;
+}
+
+.nav-btn:hover {
+  background-color: var(--fontColor);
+  cursor: pointer;
+  border: 1px solid var(--fontColor);
+  transition: background-color 5s ease;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 4rem;
+}
+
+:hover.hamburger {
+  cursor: pointer;
+}
+
+.show_modal {
+  display: none;
+  height: 3px;
+  width: 30px;
+  margin: 3px 0;
+  background-color: var(--fontColorHover);
+  margin: 6px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile {
+  display: none;
+}
+
+/* nav style ending */
+/* hero section styling */
+
+.hero-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--backgroundColor);
+  padding: 25px 5px;
+  overflow-x: hidden;
+}
+
+.hero-into {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
+}
+
+.hero-into h2 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+h2 span {
+  color: var(--fontColorHover);
+}
+
+.hero-into p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--paragraphColor);
+  margin: 20px 0;
+}
+
+.hero-button {
+  width: 198px;
+  height: 62px;
+  color: var(--backgroundColor);
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--fontColorHover);
+  border: 1px solid var(--fontColorHover);
+  border-radius: 35px;
+  margin-top: 20px;
+}
+
+.hero-button:hover {
+  cursor: pointer;
+  background-color: var(--fontColor);
+  border: 1px solid var(--fontColor);
+  transition: background-color 5s ease;
+}
+
+/* first section ending */
+.hero-img {
+  width: 480px;
+  height: 550px;
+  position: relative;
+  /* margin: 30px 0; */
+  z-index: 2;
+}
+.frames {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}
+
+/* second section ending */
+.hero-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-courses {
+  display: flex;
+  flex-wrap: wrap;
+  width: 206px;
+  height: 90px;
+  margin-top: 10px;
+  margin-right: -30px;
+  background-color: var(--backgroundColor);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-out 1s;
+  z-index: 5;
+}
+
+.hero-courses:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hero-courses img {
+  padding: 26px 20px;
+  height: 80px;
+}
+
+.hero-courses img:hover {
+  cursor: pointer;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+  font-size: 18px;
+}
+
+.numb-col {
+  color: var(--fontColorHover);
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: -10px;
+}
+
+.numb-col:hover {
+  cursor: pointer;
+}
+
+.details {
+  font-weight: 500;
+  color: var(--fontColor);
+}
+
+/* Mid section styling */
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+}
+
+.digits {
+  display: flex;
+  justify-content: space-around;
+  height: 267px;
+  background-color: var(--fontColorHover);
+  color: var(--backgroundColor);
+  margin: 1rem 0;
+}
+
+.first-digit {
+  margin: 5rem 10rem;
+  font-weight: 500;
+  /* margin-left: 2rem; */
+}
+
+.first-digit h3 {
+  font-size: 48px;
+  line-height: 80px;
+}
+
+.first-digit p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.inputs h4 {
+  color: var(--fontColorHover);
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.inputs p {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.nest {
+  align-items: center;
+  position: relative;
+}
+
+.search {
+  margin: 2rem 0 2rem -4rem;
+  height: 70px;
+  width: 600px;
+  border-radius: 10px;
+  border: 1px solid var(--gray);
+  text-indent: 15px;
+}
+
+.search:hover {
+  cursor: pointer;
+}
+
+.join {
+  position: absolute;
+  left: 31rem;
+  top: 2rem;
+  height: 70px;
+  width: 100px;
+  background-color: var(--fontColorHover);
+  border: 1px solid var(--fontColorHover);
+  border-radius: 0 10px 10px 0;
+}
+
+.icon {
+  margin: 15px 5px;
+  padding: 5px 5px;
+  height: 40px;
+}
+
+.big-star {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 725px;
+  bottom: 17rem;
+}
+
+.mid-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 220px;
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid var(--backgroundColor);
+  box-shadow: 1px 0px 9px 9px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-out 1s;
+  margin: auto 2.5rem;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tech {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+}
+
+.cards p {
+  font-size: 20px;
+  color: var(--paragraphColor);
+}
+
+.mid-end {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.mid-end p {
+  color: var(--fontColor);
+  font-size: 20px;
+  margin: 1rem auto;
+}
+
+.arrow {
+  height: 10px;
+}
+
+.mid-end span {
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+}
+
+.mid-end span:hover {
+  cursor: pointer;
+}
+
+.round {
+  height: 20px;
+}
+
+.buttom-star {
+  height: 30px;
+  width: 30px;
+}
+
+/* explore component styles */
+
+.exp-container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto 1.5em;
+}
+
+.exp-tails {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.exp-tails h5 {
+  font-size: 40px;
+  max-width: 500px;
+  line-height: 1.5em;
+  margin: 10px 0;
+  color: var(--paragraphColor);
+}
+
+.exp-tails p {
+  font-size: 17px;
+  max-width: 495px;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: var(--fontColor);
+  margin: 1em 0;
+}
+
+.exp-start {
+  margin: 1rem 0;
+}
+
+.checkIcon {
+  height: 20px;
+  margin-right: 1em;
+}
+
+.score {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--paragraphColor);
+  margin-right: 1rem;
+}
+
+.exp-btn {
+  height: 50px;
+  width: 160px;
+  margin: 2rem 0;
+  background-color: var(--fontColorHover);
+  color: var(--backgroundColor);
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--fontColorHover);
+  border-radius: 25px;
+}
+
+.exp-btn:hover {
+  cursor: pointer;
+  background-color: var(--gray);
+  border: 1px solid var(--gray);
+  transition: background-color 5s ease;
+}
+
+.exp-round1 {
+  height: 20px;
+}
+/* second */
+.exp-frames {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.exp-bigframe {
+  position: relative;
+}
+
+.exp-surpframe {
+  position: relative;
+  top: -12em;
+  right: 9em;
+  height: 18rem;
+  width: 18rem;
+}
+
+.exp-round2 {
+  height: 20px;
+  margin-top: -10em;
+}
+/* -----Benefits----- */
+
+.ben-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 1.5em;
+}
+
+.ben-top {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.ben-top h6 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--fontColorHover);
+}
+
+.uppergraph {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.let {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.let span {
+  color: var(--fontColorHover);
+}
+
+.benefitsCardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5em 1.5em;
+}
+
+.ben-cards {
+  height: 26em;
+  width: 22em;
+  border: 1px solid var(--backgroundColor);
+  border-radius: 10px;
+  box-shadow: 2px 3px 8px 8px rgba(0.1, 0.1, 0.1, 0.1);
+  margin: 20px 20px;
+  padding: 60px 30px 70px 30px;
+  transition: transform 1s ease-out 1s;
+}
+
+.ben-cards:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.top-graph {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--paragraphColor);
+  margin: 15px 0;
+}
+
+.second-graph {
+  font-size: 18px;
+  line-height: 1.5em;
+  color: var(--fontColor);
+}
+
+/* course style */
+
+.courseContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7rem auto;
+}
+
+.courseContainer h2 {
+  font-size: 30px;
+  margin: 15px 0;
+  letter-spacing: 1px;
+}
+
+.choose {
+  color: var(--fontColor);
+  margin-bottom: 90px;
+}
+
+.courseContainer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.graphic {
+  color: var(--greencolor);
+  margin: auto 20px;
+  position: relative;
+}
+
+.graphic:hover {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--greenhover);
+}
+
+.graphic:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  top: 68px;
+  left: 0;
+  background-color: var(--greenhover);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.graphic:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.line {
+  align-self: center;
+  height: 3px;
+  width: 70%;
+  background-color: var(--linegreen);
+  margin-top: 3rem;
+}
+/* course cards */
+.courseCardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem auto;
+}
+
+.courseCards {
+  height: 26em;
+  width: 19em;
+  border: 1px solid var(--backgroundColor);
+  border-radius: 10px;
+  box-shadow: 3px 8px 8px rgba(0.1, 0.1, 0.1, 0.1);
+  margin: 20px 20px;
+  transition: transform 1s ease-out 1s;
+}
+
+.courseCards:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.facebookCourse,
+.PHPCourse,
+.FigmaCourse {
+  object-fit: contain;
+  width: 19em;
+}
+
+.headCard {
+  color: var(--paragraphColor);
+  font-size: 18px;
+  padding: 1em 1em 1em 1em;
+}
+
+.profileImage {
+  height: 25px;
+  margin: 0 0 -5px 0;
+  padding: 0 1em;
+}
+
+.name {
+  font-size: 14px;
+  color: var(--fontColor);
+}
+
+.hold {
+  display: flex;
+  padding: 0.5em 1em;
+}
+
+.numb {
+  font-size: 14px;
+  color: var(--fontColorHover);
+}
+
+.rating {
+  height: 18px;
+  width: 80px;
+  margin: 0 10px;
+}
+
+.close {
+  display: flex;
+  padding: 0.2em 1em;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.lineThrough {
+  margin: 0 10px;
+  text-decoration: line-through;
+  color: var(--fontColor);
+}
+
+.last {
+  font-size: 14px;
+  color: var(--fontColor);
+}
+
+/* catalogue section */
+
+.categoriesContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--creambackground);
+  height: 55rem;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.browse {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 50px;
+  margin-top: 3rem;
+}
+
+.browse h3 {
+  font-size: 40px;
+  font-weight: 600;
+  max-width: 300px;
+}
+
+.browse p {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: var(--fontColor);
+  max-width: 350px;
+  margin: 2rem 0;
+}
+
+.catBtn {
+  height: 40px;
+  width: 150px;
+  background-color: var(--fontColorHover);
+  border: 1px solid var(--fontColorHover);
+  border-radius: 20px;
+  color: var(--backgroundColor);
+  font-weight: 500;
+}
+
+.catBtn:hover {
+  cursor: pointer;
+  background-color: var(--fontColor);
+  border: 1px solid var(--fontColor);
+  transition: background-color 5s ease;
+}
+
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+}
+
+.logueCards {
+  display: flex;
+  height: 8em;
+  width: 38em;
+  background-color: var(--backgroundColor);
+  padding: 10px 5px;
+  margin: 15px 0;
+}
+
+.specifics {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+.topdawg {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.crenshaw {
+  color: var(--greencolor);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.crenshaw:hover {
+  cursor: pointer;
+  color: var(--greenhover);
+}
+
+.butt {
+  margin-top: 40rem;
+  color: var(--greencolor);
+  position: absolute;
+}
+
+.butt:hover {
+  cursor: pointer;
+  color: var(--greenhover);
+}
+
+/*--Instructor--*/
+.instruContainer {
+  text-align: center;
+  align-items: center;
+  margin: 5rem 2rem;
+}
+
+.hook h3 {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.hook p {
+  font-size: 17px;
+  color: var(--fontColor);
+}
+
+.pick {
+  display: flex;
+  justify-content: center;
+  margin: 50px 30px;
+}
+
+.pictures {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.instructorsImg {
+  height: 23rem;
+  margin: 20px 20px;
+}
+
+.firstgraph {
+  color: var(--paragraphColor);
+  font-weight: 600;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.secondgraph {
+  color: var(--fontColorHover);
+}
+/* ------Testimonials------- */
+.container-Testimony {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 15rem 5rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flew {
+  color: var(--fontColorHover);
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.rough {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.testCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+.testCards2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.tabs {
+  display: flex;
+  margin: 2rem 1.5rem;
+  width: 33rem;
+  height: 17rem;
+  border: 1px solid var(--backgroundColor);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 2rem 1rem;
+}
+
+.Ant,
+.Marvin,
+.Jenny,
+.Ariene {
+  height: 8rem;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+.StarIndicator {
+  height: 1.5rem;
+  margin-right: 11rem;
+}
+
+.quote {
+  color: var(--fontColor);
+  margin: 30px 0;
+  font-size: 19px;
+  max-width: 300px;
+  line-height: 1.7rem;
+}
+
+.taggers {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* footer */
+
+.footContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--footerbackground);
+  color: var(--backgroundColor);
+}
+
+.foottop {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 2rem;
+}
+
+.listOne {
+  display: flex;
+  flex-direction: column;
+}
+
+.company {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.bracket {
+  font-size: 15px;
+  font-weight: 200;
+  max-width: 350px;
+  margin: 5rem 0;
+}
+
+.broadcast {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1400px) {
+  .big-star {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1302px) {
+  .inputs {
+    margin: 1rem auto;
+  }
+
+  .inputs h4 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .inputs p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .nest {
+    align-items: center;
+    position: relative;
+  }
+
+  .search {
+    height: 50px;
+    width: 400px;
+  }
+
+  .join {
+    left: 20rem;
+    height: 50px;
+    width: 80px;
+  }
+
+  .icon {
+    margin: 10px 5px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .hero-container {
+    padding: 25px 10px;
+  }
+  .hero-into {
+    width: 350px;
+  }
+  .hero-into h2 {
+    font-size: 40px;
+  }
+  .hero-into p {
+    font-size: 15px;
+    margin: 15px 0;
+  }
+
+  .hero-button {
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .hero-img {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-courses {
+    width: 180px;
+    height: 70px;
+  }
+
+  .hero-courses img {
+    height: 70px;
+  }
+
+  .course-details {
+    font-size: 15px;
+  }
+
+  .numb-col {
+    font-size: 14px;
+    line-height: 5px;
+    margin: 5px 0;
+  }
+
+  .details {
+    font-size: 13px;
+  }
+  /* middle section */
+  .digits {
+    height: 200px;
+  }
+
+  .first-digit {
+    margin: 5rem 10rem;
+  }
+
+  .first-digit h3 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .first-digit p {
+    font-size: 13px;
+  }
+  /* --cards-- */
+  .ben-container {
+    margin-top: 5rem;
+  }
+
+  .ben-top h6 {
+    font-size: 20px;
+  }
+
+  .uppergraph {
+    font-size: 30px;
+  }
+
+  .let {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .ben-cards {
+    height: 23em;
+    width: 18em;
+  }
+
+  .top-graph {
+    font-size: 17px;
+    margin: 15px 0;
+  }
+
+  .second-graph {
+    font-size: 15px;
+  }
+  /* instructor */
+
+  .instructorsImg {
+    height: 20rem;
+    margin: 20px 20px;
+  }
+
+  /* testimonial */
+
+  .tabs {
+    margin: 2rem 1.5rem;
+    width: 27rem;
+    height: 14rem;
+  }
+
+  .Ant,
+  .Marvin,
+  .Jenny,
+  .Ariene {
+    height: 5rem;
+  }
+
+  .StarIndicator {
+    height: 1.5rem;
+    margin-right: 11rem;
+  }
+
+  .quote {
+    color: var(--fontColor);
+    margin: 20px 10px 25px 0;
+    font-size: 15px;
+    max-width: 280px;
+    line-height: 1.7rem;
+  }
+
+  .taggers {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .hero-into {
+    width: 300px;
+  }
+  .hero-into h2 {
+    font-size: 30px;
+  }
+  .hero-into p {
+    font-size: 14px;
+  }
+
+  .hero-button {
+    width: 130px;
+    height: 40px;
+    font-size: 13px;
+  }
+  .hero-img {
+    width: 250px;
+    height: 400px;
+  }
+  .hero-courses {
+    width: 150px;
+    height: 70px;
+  }
+  /* middle section */
+  .digits {
+    height: 180px;
+  }
+
+  .first-digit {
+    margin: 5rem 9rem;
+  }
+
+  .first-digit h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .first-digit p {
+    font-size: 8px;
+  }
+  /* cards */
+  .cards {
+    height: 180px;
+    width: 200px;
+    margin: auto 1.5rem;
+  }
+
+  .tech {
+    height: 80px;
+    width: 80px;
+  }
+
+  .cards p {
+    font-size: 15px;
+  }
+  /* explore component styles */
+
+  .exp-tails h5 {
+    font-size: 25px;
+    max-width: 300px;
+    margin: 5px 0;
+  }
+
+  .exp-tails p {
+    font-size: 14px;
+    max-width: 300px;
+    margin: 20px 0;
+  }
+
+  .exp-start {
+    margin: 5px 0;
+  }
+
+  .checkIcon {
+    height: 20px;
+    margin-right: 1em;
+  }
+
+  .score {
+    font-size: 11px;
+  }
+
+  .exp-btn {
+    height: 40px;
+    width: 140px;
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  .exp-round1 {
+    height: 20px;
+  }
+  /* second */
+  .exp-bigframe {
+    height: 20rem;
+  }
+
+  .exp-surpframe {
+    position: relative;
+    top: -6em;
+    right: 4em;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .exp-round2 {
+    height: 20px;
+    margin-top: -10em;
+  }
+  /* --Benefits-- */
+  .ben-container {
+    margin-top: 5rem;
+  }
+
+  .ben-top h6 {
+    font-size: 20px;
+  }
+
+  .uppergraph {
+    font-size: 30px;
+  }
+
+  .let {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .ben-cards {
+    height: 19em;
+    width: 15em;
+    margin: 0 10px;
+  }
+
+  .remote_classes,
+  .E-reg,
+  .Message {
+    height: 30px;
+  }
+
+  .top-graph {
+    font-size: 15px;
+    margin: 15px 0;
+  }
+
+  .second-graph {
+    font-size: 14px;
+  }
+
+  /* course card */
+
+  .courseContainer h2 {
+    font-size: 20px;
+  }
+
+  .choose {
+    font-size: 13px;
+  }
+
+  .graphic {
+    margin: auto 10px;
+    font-size: 12px;
+  }
+
+  .graphic:after {
+    top: 63px;
+  }
+
+  .courseCards {
+    height: 20em;
+    width: 15em;
+    margin: 20px 10px;
+  }
+
+  .facebookCourse,
+  .PHPCourse,
+  .FigmaCourse {
+    width: 15em;
+  }
+
+  .headCard {
+    font-size: 15px;
+    padding: 1em 1em 1em 1em;
+  }
+
+  .profileImage {
+    height: 20px;
+  }
+
+  .name,
+  .numb {
+    font-size: 12px;
+  }
+
+  .rating {
+    height: 18px;
+    width: 70px;
+    margin: 0 8px;
+  }
+
+  .close,
+  .last {
+    font-size: 12px;
+  }
+  /* catalogue section */
+
+  .categoriesContainer {
+    height: 50rem;
+  }
+
+  .browse {
+    padding: 50px 50px;
+    margin-top: 3rem;
+  }
+
+  .browse h3 {
+    font-size: 30px;
+    max-width: 300px;
+  }
+
+  .browse p {
+    font-size: 14px;
+    max-width: 350px;
+  }
+
+  .catBtn {
+    height: 35px;
+    width: 140px;
+    font-size: 12px;
+  }
+
+  .logueCards {
+    height: 8em;
+    width: 30em;
+  }
+
+  .topdawg {
+    font-size: 14px;
+  }
+
+  .crenshaw {
+    font-size: 13px;
+  }
+
+  .butt {
+    margin-top: 40rem;
+  }
+  /* instructor */
+
+  .hook h3 {
+    font-size: 20px;
+  }
+
+  .hook p {
+    font-size: 14px;
+  }
+
+  .instructorsImg {
+    height: 15rem;
+  }
+
+  .firstgraph {
+    font-size: 14px;
+  }
+
+  .secondgraph {
+    font-size: 14px;
+  }
+  /* Testimonial */
+
+  .flew {
+    font-size: 19px;
+  }
+
+  .rough {
+    font-size: 25px;
+  }
+
+  .tabs {
+    width: 25rem;
+    height: 13rem;
+    margin: 20px 20px;
+  }
+
+  .Ant,
+  .Marvin,
+  .Jenny,
+  .Ariene {
+    height: 6rem;
+  }
+
+  .StarIndicator {
+    height: 1.5rem;
+    margin-right: 11rem;
+  }
+
+  .quote {
+    font-size: 13px;
+    max-width: 250px;
+    line-height: 1.7rem;
+  }
+
+  .taggers {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-list,
+  .nav-btn {
+    display: none;
+  }
+  .nav-image {
+    margin-left: 2rem;
+  }
+  .hamburger {
+    margin-right: 2rem;
+  }
+  .show_modal {
+    display: block;
+    margin: 4px;
+  }
+  .mobile {
+    display: block;
+    position: absolute;
+    margin: auto;
+    right: 0.2rem;
+    top: 5rem;
+    background-color: var(--gray);
+    height: 18rem;
+    width: 10rem;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    z-index: 10;
+  }
+  .mobile ul {
+    list-style: none;
+  }
+  .mobile li {
+    text-align: center;
+    color: var(--backgroundColor);
+    font-weight: 700;
+    margin: 20px auto;
+  }
+  .mobile li:hover {
+    cursor: pointer;
+    color: var(--fontColorHover);
+  }
+  /* middle section */
+
+  .first-digit {
+    margin: 5rem 7rem;
+  }
+
+  .first-digit h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .first-digit p {
+    font-size: 8px;
+  }
+  /* cards */
+  .ben-cards {
+    height: 16em;
+    width: 14em;
+  }
+
+  .remote_classes,
+  .E-reg,
+  .Message {
+    height: 30px;
+  }
+
+  .top-graph {
+    font-size: 15px;
+  }
+
+  .second-graph {
+    font-size: 13px;
+  }
+  /* course card */
+
+  .courseCards {
+    height: 18em;
+    width: 13em;
+    margin: 20px 10px;
+  }
+
+  .facebookCourse,
+  .PHPCourse,
+  .FigmaCourse {
+    width: 13em;
+  }
+
+  .headCard {
+    font-size: 13px;
+    padding: 1em 1em 1em 1em;
+  }
+
+  .profileImage {
+    height: 18px;
+  }
+
+  .name,
+  .numb {
+    font-size: 12px;
+  }
+
+  .rating {
+    height: 18px;
+    width: 70px;
+    margin: 0 8px;
+  }
+
+  .close,
+  .last {
+    font-size: 12px;
+  }
+  /* catalogue section */
+
+  .browse h3 {
+    font-size: 20px;
+    max-width: 300px;
+  }
+
+  .logueCards {
+    height: 8em;
+    width: 23em;
+  }
+  /* instuctor */
+  .instructorsImg {
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-into {
+    align-items: center;
+    width: 250px;
+  }
+  .hero-button {
+    align-items: center;
+  }
+  .hero-display {
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-courses {
+    position: relative;
+    top: -10em;
+    left: 11em;
+  }
+  .hero-img {
+    margin-top: 5em;
+    margin-right: 8em;
+  }
+  /* middle section */
+
+  .first-digit {
+    margin: 5rem 4rem;
+  }
+  /* cards */
+  .cards {
+    height: 140px;
+    width: 150px;
+    margin: auto 0.5rem;
+  }
+
+  .tech {
+    height: 50px;
+    width: 50px;
+  }
+
+  .cards p {
+    font-size: 13px;
+  }
+  /* explore component styles */
+  .exp-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-tails p {
+    font-size: 12px;
+    max-width: 300px;
+    margin: 20px 0;
+  }
+
+  .checkIcon {
+    height: 15px;
+    margin-right: 0.5em;
+  }
+
+  .score {
+    font-size: 11px;
+  }
+
+  .exp-btn {
+    margin: 8px auto;
+  }
+
+  .exp-round1 {
+    height: 20px;
+  }
+  /* second */
+  .exp-bigframe {
+    height: 20rem;
+  }
+
+  .exp-surpframe {
+    position: relative;
+    top: -6em;
+    right: 4em;
+    height: 10rem;
+    width: 10rem;
+  }
+  /* cards */
+  /* .benefitsCardHolder {
+    flex-direction: column;
+  } */
+
+  .ben-cards {
+    height: 16em;
+    width: 14em;
+    margin: 20px auto;
+  }
+
+  .second-graph {
+    font-size: 11px;
+  }
+  /* catalogue section */
+
+  .categoriesContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75rem;
+  }
+
+  .browse {
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .browse h3 {
+    font-size: 20px;
+  }
+
+  .browse p {
+    font-size: 12px;
+    max-width: 220px;
+  }
+
+  .logueCards {
+    height: 8em;
+    width: 23em;
+  }
+
+  .butt {
+    align-items: center;
+    left: 12em;
+  }
+  /* instructor */
+  .instructorsImg {
+    height: 9rem;
+  }
+  .firstgraph,
+  .secondgraph {
+    font-size: 11px;
+  }
+  /* Testimonials */
+
+  .flew {
+    font-size: 17px;
+  }
+
+  .rough {
+    font-size: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1.5rem;
+    width: 17rem;
+    height: 32rem;
+  }
+
+  .Ant,
+  .Marvin,
+  .Jenny,
+  .Ariene {
+    height: 7rem;
+  }
+
+  .split {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+
+  .StarIndicator {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+  }
+
+  .quote {
+    margin: 5px 0;
+    font-size: 15px;
+  }
+
+  .taggers {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* middle section */
+
+  .first-digit {
+    margin: 5rem 1rem;
+  }
+  .first-digit h3 {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .first-digit p {
+    font-size: 7px;
+  }
+  /* middle input */
+  .inputs {
+    margin: 1rem auto;
+  }
+
+  .inputs h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .inputs p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .search {
+    height: 40px;
+    width: 200px;
+    margin-left: -1em;
+    font-size: 8px;
+  }
+
+  .join {
+    left: 10rem;
+    height: 40px;
+    width: 50px;
+  }
+
+  .icon {
+    margin: 5px 5px;
+    height: 25px;
+  }
+  /* cards */
+  .mid-cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: -20px auto;
+  }
+  .cards {
+    margin: 1rem auto;
+  }
+  /* course */
+  .courseContainer h2 {
+    font-size: 15px;
+  }
+
+  .choose {
+    font-size: 13px;
+    padding: 0 2em;
+  }
+
+  .courseContainer ul {
+    flex-direction: column;
+  }
+
+  .graphic {
+    margin: 10px 0;
+  }
+
+  .graphic:after {
+    display: none;
+  }
+  /* instructor */
+  .pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .instructorsImg {
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .courseCardHolder {
+    flex-direction: column;
+  }
+  /* categories */
+  .categoriesContainer {
+    height: 100rem;
+  }
+
+  .logueCards {
+    flex-direction: column;
+    height: 15em;
+    width: 11em;
+    margin: 12px auto;
+    padding: 1px 1px;
+  }
+
+  .webDev,
+  .digitalMarket,
+  .UiUX,
+  .Content {
+    width: 15em;
+    height: 8rem;
+    object-fit: contain;
+    padding: 0;
+    margin-left: -31px;
+  }
+
+  .specifics {
+    padding: 10px 10px;
+  }
+
+  .topdawg {
+    font-size: 10px;
+  }
+
+  .crenshaw {
+    font-size: 9px;
+  }
+
+  .butt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero-into {
+    width: 200px;
+  }
+  .hero-into h2 {
+    font-size: 20px;
+  }
+  .hero-into p {
+    font-size: 12px;
+  }
+
+  .hero-button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .hero-img {
+    width: 200px;
+    height: 300px;
+  }
+  .hero-courses {
+    top: -8em;
+    margin: auto;
+  }
+  /* mid-end */
+  .mid-end {
+    margin: 3rem auto;
+  }
+
+  .mid-end p {
+    font-size: 14px;
+  }
+
+  .arrow {
+    height: 5px;
+  }
+
+  .mid-end span {
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+  }
+
+  .mid-end span:hover {
+    cursor: pointer;
+  }
+
+  .round {
+    height: 10px;
+  }
+
+  .buttom-star {
+    height: 10px;
+    width: 10px;
+  }
+  /* explore component styles */
+
+  .exp-tails h5 {
+    font-size: 20px;
+    max-width: 280px;
+  }
+
+  .exp-tails p {
+    font-size: 12px;
+    max-width: 280px;
+  }
+
+  .checkIcon {
+    height: 14px;
+  }
+
+  .score {
+    font-size: 10px;
+  }
+
+  .exp-btn {
+    height: 30px;
+    width: 130px;
+    font-size: 10px;
+  }
+
+  .exp-round1 {
+    height: 20px;
+  }
+  /* second */
+  .exp-bigframe {
+    height: 14rem;
+  }
+
+  .exp-surpframe {
+    top: -4em;
+    right: 4em;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .exp-round2 {
+    height: 20px;
+    margin-top: -10em;
+  }
+}
